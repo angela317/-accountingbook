@@ -1,0 +1,110 @@
+/* 字型與整體頁面設定 */
+body {
+    font-family: 'Segoe UI', 'Comic Sans MS', sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3); /* 清新漸層背景 */
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #333; /* 主體文字顏色 */
+}
+
+/* 標題 */
+h1 {
+    text-align: center;
+    color: #2e8f58; /* 清新綠 */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 記帳表單區塊 */
+form {
+    background-color: #f1fbff; /* 淡藍白 */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 表單標籤 */
+form label {
+    font-size: 1.2rem;
+    color: #3cbac6; /* 清新藍綠 */
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* 表單欄位 */
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #3cbac6;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 聚焦效果 */
+form input:focus,
+form select:focus,
+form button:focus {
+    border-color: #2e8f58;
+    box-shadow: 0 0 5px rgba(46, 143, 88, 0.5);
+}
+
+/* 按鈕樣式 */
+form button {
+    background-color: #ffb6b9; /* 粉紅色 */
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #fdd9a0; /* 淡米黃 hover */
+}
+
+/* 記帳紀錄區塊 */
+#records {
+    margin-top: 30px;
+}
+
+/* 每筆記錄卡片 */
+.record {
+    background-color: #e1f5f8; /* 淺藍背景 */
+    border-radius: 12px;
+    border: 1px solid #9cb4d4;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 記錄內文 */
+.record p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+/* 強調欄位 */
+.record strong {
+    color: #3cbac6; /* 藍綠強調色 */
+    font-weight: bold;
+}
+
+/* 分隔線 */
+hr {
+    border: 1px solid #9cb4d4;
+    margin: 10px 0;
+}

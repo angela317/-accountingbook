@@ -1,110 +1,167 @@
-/* 字型與整體頁面設定 */
+/* 頁面設定 */
 body {
-    font-family: 'Segoe UI', 'Comic Sans MS', sans-serif;
-    background: linear-gradient(135deg, #a8edea, #fed6e3); /* 清新漸層背景 */
-    max-width: 600px;
-    margin: auto;
-    padding: 30px;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(135deg, #e0f7f4, #b2dfdb); /* 藍綠漸層背景 */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    color: #333; /* 主體文字顏色 */
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 外層容器：左右分欄 */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 左側：固定新增支出區域 */
+.left-panel {
+    width: 50%;
+    padding: 30px;
+    background-color: transparent;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+/* 右側：紀錄區域，可滾動 */
+.right-panel {
+    width: 50%;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: transparent;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 /* 標題 */
 h1 {
     text-align: center;
-    color: #2e8f58; /* 清新綠 */
+    color: #4daaa7;
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-/* 記帳表單區塊 */
+/* 記帳表單 */
 form {
-    background-color: #f1fbff; /* 淡藍白 */
+    background-color: #f0fbfa;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
     width: 100%;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* 表單標籤 */
+/* 表單內部元件 */
 form label {
     font-size: 1.2rem;
-    color: #3cbac6; /* 清新藍綠 */
+    color: #32817c;
     margin-bottom: 8px;
     display: block;
 }
 
-/* 表單欄位 */
 form input,
 form select,
 form button {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    border: 2px solid #3cbac6;
+    border: 2px solid #4daaa7;
     border-radius: 10px;
     font-size: 1.1rem;
-    color: #333;
+    color: #2e4f4f;
     outline: none;
     box-sizing: border-box;
 }
 
-/* 聚焦效果 */
+/* 表單項目的 focus 效果 */
 form input:focus,
 form select:focus,
 form button:focus {
-    border-color: #2e8f58;
-    box-shadow: 0 0 5px rgba(46, 143, 88, 0.5);
+    border-color: #32817c;
+    box-shadow: 0 0 5px rgba(50, 129, 124, 0.5);
 }
 
 /* 按鈕樣式 */
 form button {
-    background-color: #ffb6b9; /* 粉紅色 */
+    background-color: #4daaa7;
     color: white;
     cursor: pointer;
     border: none;
     font-weight: bold;
-    transition: background-color 0.3s;
 }
 
 form button:hover {
-    background-color: #fdd9a0; /* 淡米黃 hover */
+    background-color: #3c8d89;
 }
 
-/* 記帳紀錄區塊 */
+/* 記帳紀錄區域 */
 #records {
     margin-top: 30px;
 }
 
-/* 每筆記錄卡片 */
+/* 單筆紀錄 */
 .record {
-    background-color: #e1f5f8; /* 淺藍背景 */
+    background-color: #e6f7f6;
     border-radius: 12px;
-    border: 1px solid #9cb4d4;
+    border: 1px solid #4daaa7;
     padding: 15px;
     margin: 10px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 記錄內文 */
+/* 記帳紀錄文字 */
 .record p {
     margin: 8px 0;
+    color: #2e4f4f;
     font-size: 1.1rem;
 }
 
-/* 強調欄位 */
 .record strong {
-    color: #3cbac6; /* 藍綠強調色 */
+    color: #4daaa7;
     font-weight: bold;
 }
 
-/* 分隔線 */
 hr {
-    border: 1px solid #9cb4d4;
-    margin: 10px 0;
+    border: 1px solid #3c8d89;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 刪除按鈕樣式 */
+.delete-btn {
+    background-color: #7dd1cd;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100px;
+}
+
+.delete-btn:hover {
+    background-color: #4daaa7;
+}
+
+.delete-btn:active {
+    transform: scale(0.96);
+}
+
+/* 滾動條樣式 */
+.right-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+    background-color: #4daaa7;
+    border-radius: 4px;
 }

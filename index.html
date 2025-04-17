@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>記帳本</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 圖表 -->
 </head>
 <body>
   <div class="container">
@@ -38,6 +39,16 @@
     <!-- 右側：紀錄列表 -->
     <div class="right-panel">
       <h2>記帳紀錄</h2>
+
+      <!-- 🔽 加入新功能元素 🔽 -->
+      <label for="monthFilter">選擇月份：</label>
+      <input type="month" id="monthFilter" />
+
+      <p id="totalDisplay">本月總支出：$0</p>
+
+      <canvas id="chart" width="400" height="400"></canvas>
+      <!-- 🔼 新功能結束 🔼 -->
+
       <div id="records"></div>
     </div>
   </div>

@@ -195,3 +195,28 @@ hr {
     max-width: 100%;
     margin-bottom: 30px;
 }
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-buttons button {
+    padding: 10px 20px;
+    border: 2px solid #3a7ca5;
+    background-color: white;
+    color: #3a7ca5;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 10px;
+    transition: 0.3s;
+  }
+  
+  .toggle-buttons button.active,
+  .toggle-buttons button:hover {
+    background-color: #3a7ca5;
+    color: white;
+  }
+  

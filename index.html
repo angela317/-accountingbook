@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>記帳本</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 圖表 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="container">
@@ -36,20 +36,28 @@
       </form>
     </div>
 
-    <!-- 右側：紀錄列表 -->
+    <!-- 右側：紀錄 + 圖表 -->
     <div class="right-panel">
-      <h2>記帳紀錄</h2>
+      <h2>記帳總覽</h2>
 
-      <!-- 🔽 加入新功能元素 🔽 -->
-      <label for="monthFilter">選擇月份：</label>
-      <input type="month" id="monthFilter" />
+      <!-- 🔽 切換按鈕 -->
+      <div class="toggle-buttons">
+        <button id="showRecordsBtn" class="active">支出紀錄</button>
+        <button id="showChartBtn">支出報表</button>
+      </div>
 
-      <p id="totalDisplay">本月總支出：$0</p>
+      <!-- 🔽 支出紀錄區塊 -->
+      <div id="recordSection">
+        <label for="monthFilter">選擇月份：</label>
+        <input type="month" id="monthFilter" />
+        <p id="totalDisplay">本月總支出：$0</p>
+        <div id="records"></div>
+      </div>
 
-      <canvas id="chart" width="400" height="400"></canvas>
-      <!-- 🔼 新功能結束 🔼 -->
-
-      <div id="records"></div>
+      <!-- 🔽 支出圖表區塊 -->
+      <div id="chartSection" style="display: none;">
+        <canvas id="chart" width="400" height="400"></canvas>
+      </div>
     </div>
   </div>
 

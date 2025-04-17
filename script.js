@@ -13,6 +13,23 @@ let chart; // Chart.js 圖表實例
 window.addEventListener("load", async () => {
     await loadRecords();
     renderChart(); // 初始空白圖表
+    // 🔁 切換支出紀錄 / 報表
+  document.getElementById("showRecordsBtn").addEventListener("click", () => {
+    document.getElementById("recordSection").style.display = "block";
+    document.getElementById("chartSection").style.display = "none";
+  
+    document.getElementById("showRecordsBtn").classList.add("active");
+    document.getElementById("showChartBtn").classList.remove("active");
+  });
+  
+  document.getElementById("showChartBtn").addEventListener("click", () => {
+    document.getElementById("recordSection").style.display = "none";
+    document.getElementById("chartSection").style.display = "block";
+  
+    document.getElementById("showChartBtn").classList.add("active");
+    document.getElementById("showRecordsBtn").classList.remove("active");
+  });
+  
 });
 
 // 🟦 載入資料

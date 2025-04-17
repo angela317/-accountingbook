@@ -1,7 +1,7 @@
 /* 頁面設定 */
 body {
     font-family: 'Comic Sans MS', sans-serif;
-    background: linear-gradient(135deg, #e0f7f4, #b2dfdb); /* 藍綠漸層背景 */
+    background: linear-gradient(135deg, #aee1f9, #fff4b2); /* 淺藍到淺黃的漸層背景 */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,7 +39,7 @@ body {
 /* 標題 */
 h1 {
     text-align: center;
-    color: #4daaa7;
+    color: #3a7ca5; /* 深藍色 */
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: bold;
@@ -47,7 +47,7 @@ h1 {
 
 /* 記帳表單 */
 form {
-    background-color: #f0fbfa;
+    background-color: #e6f7ff; /* 淺藍色 */
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,7 @@ form {
 /* 表單內部元件 */
 form label {
     font-size: 1.2rem;
-    color: #32817c;
+    color: #3a7ca5;
     margin-bottom: 8px;
     display: block;
 }
@@ -71,10 +71,10 @@ form button {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    border: 2px solid #4daaa7;
+    border: 2px solid #3a7ca5;
     border-radius: 10px;
     font-size: 1.1rem;
-    color: #2e4f4f;
+    color: #2f4858;
     outline: none;
     box-sizing: border-box;
 }
@@ -83,13 +83,13 @@ form button {
 form input:focus,
 form select:focus,
 form button:focus {
-    border-color: #32817c;
-    box-shadow: 0 0 5px rgba(50, 129, 124, 0.5);
+    border-color: #f4c542; /* 黃色聚焦效果 */
+    box-shadow: 0 0 5px rgba(244, 197, 66, 0.6);
 }
 
 /* 按鈕樣式 */
 form button {
-    background-color: #4daaa7;
+    background-color: #3a7ca5;
     color: white;
     cursor: pointer;
     border: none;
@@ -97,7 +97,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #3c8d89;
+    background-color: #2e5e82;
 }
 
 /* 記帳紀錄區域 */
@@ -105,39 +105,47 @@ form button:hover {
     margin-top: 30px;
 }
 
+/* 標題 */
+h2 {
+    text-align: center;
+    color: #96d82a; /* 綠色 */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 /* 單筆紀錄 */
 .record {
-    background-color: #e6f7f6;
+    background-color: #fffbe6; /* 淡黃色背景 */
     border-radius: 12px;
-    border: 1px solid #4daaa7;
+    border: 1px solid #3a7ca5;
     padding: 15px;
     margin: 10px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* 記帳紀錄文字 */
 .record p {
     margin: 8px 0;
-    color: #2e4f4f;
+    color: #2f4858;
     font-size: 1.1rem;
 }
 
 .record strong {
-    color: #4daaa7;
+    color: #3a7ca5;
     font-weight: bold;
 }
 
 hr {
-    border: 1px solid #3c8d89;
+    border: 1px solid #3a7ca5;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 /* 刪除按鈕樣式 */
 .delete-btn {
-    background-color: #7dd1cd;
+    background-color: #f4c542; /* 黃色按鈕 */
     border: none;
-    color: white;
+    color: #2f4858;
     padding: 10px 16px;
     margin-top: 10px;
     border-radius: 8px;
@@ -149,19 +157,19 @@ hr {
 }
 
 .delete-btn:hover {
-    background-color: #4daaa7;
+    background-color: #d9a81c;
 }
 
 .delete-btn:active {
     transform: scale(0.96);
 }
 
-/* 滾動條樣式 */
+/* 美化右側 scrollbar */
 .right-panel::-webkit-scrollbar {
     width: 8px;
 }
 
 .right-panel::-webkit-scrollbar-thumb {
-    background-color: #4daaa7;
+    background-color: #3a7ca5;
     border-radius: 4px;
 }
